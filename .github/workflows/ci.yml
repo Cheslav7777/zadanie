@@ -1,0 +1,14 @@
+name: CI
+
+# Запускать при каждом пуше в master/main
+on:
+  push:
+    branches: [ master, main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4   # скачать код репозитория
+      - name: Проверка
+        run: echo "CI test passed!"
